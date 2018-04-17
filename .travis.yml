@@ -1,0 +1,9 @@
+language: cpp
+branches:
+  only:
+    - master
+
+before_script: ls
+
+script:
+  - make -C Build
