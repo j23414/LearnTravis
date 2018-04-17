@@ -9,5 +9,5 @@ compiler:
   - g++
 
 script:
-  - g++ main.cpp -o h
+  - g++ src/main.cpp -o h
   - make -C Build
