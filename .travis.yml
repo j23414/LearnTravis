@@ -10,4 +10,3 @@ compiler:
 
 script:
   - g++ src/main.cpp -o h
-  - make -C Build
