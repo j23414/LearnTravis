@@ -1,13 +1,14 @@
-language: cpp,python
+#language: cpp
+language: python
 branches:
   only:
     - master
 
 before_script: ls
 
-compiler:
-  - g++
+#compiler:
+#  - g++
 
 script:
-  - g++ src/main.cpp -o h
+#  - g++ src/main.cpp -o h
   - ./scrape.py
