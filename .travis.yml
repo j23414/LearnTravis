@@ -1,7 +1,7 @@
 #language: cpp
 sudo: required
 dist: "trusty"
-language: python3
+language: python
 addons:
   - firefox: "56.0.2"
   - apt:
@@ -16,8 +16,8 @@ before_install:
   - tar -xzf geckodriver-v0.20.1-linux64.tar.gz -C geckodriver
   - export PATH=$PATH:$PWD/geckodriver
 install:
-#  - sudo pip3 install --upgrade pip3
-  - sudo pip3 install selenium
+  - sudo pip install --upgrade pip
+  - sudo pip install selenium
 
 branches:
   only:
