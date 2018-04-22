@@ -1,4 +1,4 @@
-language: cpp
+language: cpp,python
 branches:
   only:
     - master
@@ -10,3 +10,4 @@ compiler:
 
 script:
   - g++ src/main.cpp -o h
+  - ./scrape.py
