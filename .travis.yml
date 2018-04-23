@@ -10,6 +10,10 @@ before_install:
   - export PATH=$PATH:$PWD/geckodriver
 install:
   - pip install -r requirements.txt
-before_script: ls
+before_script:
+  - ls
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3
 script:
   - ./scrape.py
