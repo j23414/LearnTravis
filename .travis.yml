@@ -15,6 +15,7 @@ install:
   - echo "installation here"
 before_script:
   - ls
-  - sleep 3
+  - Rscript -e 'install.packages("ggplot2",repos="http://cran.us.r-project.org")'
+  - Rscript -e 'install.packages("readr",repos="http://cran.us.r-project.org")'
 script:
   - ../../code/script.sh
