@@ -1,6 +1,10 @@
 language: R
 R:
   - "3.5"
+r_packages:
+  - ggplot2
+  - readr
+cache: packages
 addons:
   - echo "add ons here"
 before_install:
