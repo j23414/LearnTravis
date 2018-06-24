@@ -13,4 +13,4 @@ before_script:
   - ls
   - sleep 3
 script:
-  - ../../code/script.R
+  - ../../code/script.sh
