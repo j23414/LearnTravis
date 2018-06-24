@@ -19,3 +19,5 @@ before_script:
   - Rscript -e 'install.packages("readr",repos="http://cran.us.r-project.org")'
 script:
   - ../../code/script.sh
+after_script:
+  -ls
