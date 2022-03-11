@@ -1,23 +1,16 @@
-language: R
-R:
-  - "3.5"
-r_packages:
-  - ggplot2
-  - readr
-cache: packages
-addons:
-  - echo "add ons here"
+sudo: required
+services:
+  - docker
+language: python
+python:
+  - "3.7"
 before_install:
-  - mkdir -p data/test
-  - cd data/test
-  - echo "Neo4j" > config.txt
+  - python3 -m pip install --upgrade pip setuptools wheel
 install:
-  - echo "installation here"
-before_script:
-  - ls
-  - Rscript -e 'install.packages("ggplot2",repos="http://cran.us.r-project.org")'
-  - Rscript -e 'install.packages("readr",repos="http://cran.us.r-project.org")'
+  - pip3 install git+https://github.com/nextstrain/cli
+  - nextstrain version
+  - nextstrain check-setup
+  - nextstrain update
 script:
-  - ../../code/script.sh
-after_script:
-  -ls
+  - mkdir -p data/
+
